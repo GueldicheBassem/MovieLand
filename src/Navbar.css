@@ -1,0 +1,89 @@
+/* Make sure there is no margin on body and html to remove any spacing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+.navbar {
+  position: fixed; /* Fix it to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the screen */
+  height: 87px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align to the left */
+  padding: 0 3rem; /* Larger padding for left and right */
+  background-color: rgba(0, 0, 0, 0); /* Fully transparent initially */
+  z-index: 1000;
+  transition: background-color 0.3s, opacity 0.5s;
+  opacity: 0; /* Initially hidden */
+  margin-bottom: 1rem; /* Add margin to prevent overlap */
+  border-radius: 10px; /* Rounded corners for navbar */
+
+  &.visible {
+    background-color: rgba(0, 0, 0, 0.7); /* Visible when hovered or at the top */
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+    opacity: 1;
+  }
+
+  .logo {
+    font-size: 2rem; /* Larger title */
+    color: #dd1c0b; /* Movie-style golden color */
+    font-family: "Cinzel", serif; /* A movie-poster style font */
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    margin-right: 2rem; /* Added margin to bring links closer to the logo */
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem; /* Reduced gap for closer items */
+    align-items: center; /* Center the links vertically */
+    justify-content: flex-start; /* Align the links to the left */
+    margin-left: 5rem;
+    flex-grow: 0; /* Prevent the links from growing and pushing further */
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Slightly larger links */
+    font-weight: 500;
+    position: relative; /* To position the underline */
+    transition: color 0.3s;
+
+    &:hover {
+      color: #dd1c0b; /* Match hover color with logo */
+    }
+
+    &.active {
+      color: #dd1c0b; /* Active link indicator color */
+      font-weight: bold; /* Make the active link bold */
+      
+      /* Add underline to active link */
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #dd1c0b;
+      }
+    }
+  }
+}

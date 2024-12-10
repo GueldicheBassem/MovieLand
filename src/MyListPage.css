@@ -1,0 +1,158 @@
+/* Container for the My List Page */
+#my-list-page {
+  width: 100%;
+  margin-top: 150px;
+  padding: 35px;
+  background: #222;
+  color: #ff4500;
+  font-family: 'Cinzel', serif;
+  text-align: left;
+}
+
+/* Title Styling for "My WatchList" */
+#my-list-page h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  margin-top: 100px;
+  color: #de0808;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Carousel Section Styling */
+.carousel-section {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+/* Carousel Container */
+.carousel-container {
+  padding: 20px;
+  background-color: #292727;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* Carousel Item Styling */
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0 15px;
+  position: relative;
+  text-align: center;
+}
+
+/* Image Styling */
+.carousel-item img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Title Styling for the Carousel Item */
+.carousel-item h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #f9d3b4;
+}
+
+/* Hover Effect */
+.carousel-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Custom Dots Styling */
+.custom-dot-list-style {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.custom-dot-list-style .slick-dot {
+  background-color: #d49e6e;
+  border-radius: 50%;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+}
+
+.custom-dot-list-style .slick-dot.slick-active {
+  background-color: #f9d3b4;
+}
+
+/* Remove button styling */
+.remove-button {
+  position: absolute;
+  top: 30px;
+  right: 55px;
+  background-color: transparent;
+  color: #ff4500;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 10;  /* Ensure it's above other elements */
+}
+
+.remove-button:hover {
+  color: #f9d3b4;
+}
+
+/* Making the carousel arrows bigger */
+.slick-prev,
+.slick-next {
+  font-size: 30px;  /* Increase the size of arrows */
+  color: #f9d3b4;   /* Light color for the arrows */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;  /* Ensure arrows are above other elements */
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .carousel-item img {
+    max-width: 250px;
+  }
+
+  .carousel-container {
+    padding: 15px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 25px;  /* Adjust size for tablets */
+  }
+}
+
+@media (max-width: 464px) {
+  .carousel-item img {
+    max-width: 180px;
+  }
+
+  .carousel-container {
+    padding: 10px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 20px;  /* Adjust size for mobile */
+  }
+}

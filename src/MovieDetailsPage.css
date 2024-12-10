@@ -1,0 +1,156 @@
+  /* Movie Details Page */
+  #movie-details-page {
+      max-width: 1200px;
+      margin: auto;
+      margin-top: 35px;
+      padding: 35px;
+      color: #ff4500;
+      font-family: "Cinzel", serif;
+      background: #222;
+    }
+    
+    #movie-details-header {
+      display: flex;
+      gap: 20px; /* Adjusted gap to fit with the smaller poster size */
+      margin-bottom: 35px;
+      align-items: flex-start;
+    }
+    
+    
+    #movie-poster {
+      width: 100%;
+      max-width: 399px; /* Ensure max width doesn't exceed the container */
+      height: auto;
+      object-fit: contain; /* Prevent image cropping */
+    }
+    
+    .movie-info {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .stats-container {
+      display: flex;
+      margin-top: 30px;
+      margin-left: 10px;
+      gap: 30px; /* Adjusted for better alignment */
+      flex-wrap: wrap;
+    }
+    
+    .movie-info-text {
+      flex: 1;
+      font-size: 22px;
+      font-family: "Cinzel", serif;
+      line-height: 2;
+    }
+    
+    #user-score {
+      width: 120px;
+      height: 120px;
+      margin-top: 10px;
+    }
+    
+    .movie-overview {
+      margin-top: 20px;
+      background: #222;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-family: "Cinzel", serif;
+    }
+    
+    .movie-posters-carousel {
+      margin-top: 30px;
+      overflow: hidden;
+      gap: 15px;
+    }
+    
+    .carousel-poster {
+      width: 150px; /* Adjust carousel size */
+      height: auto;
+      border-radius: 5px;
+    }
+    
+    .movie-cast {
+      margin-top: 30px;
+    }
+    
+    .cast-list {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .cast-member {
+      text-align: center;
+      width: 120px;
+    }
+    
+    .similar-movies {
+      margin-top: 30px;
+    }
+    
+    .similar-movies-list {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .similar-movie-card {
+      width: 150px;
+      text-align: center;
+    }
+    
+    .similar-movie-image {
+      width: 100%;
+      border-radius: 5px;
+    }
+    
+    .movie-trailer {
+      margin-top: 30px;
+    }
+    
+    .trailer-video {
+      position: relative;
+      width: 100%;
+      height: 500px;  /* Set a fixed height for the trailer */
+    }
+    
+    .trailer-video iframe {
+      position: absolute;
+      top: 80px;
+      bottom :55px;
+      left: 0;
+      width: 85%;
+      height: 85%;
+      border: none;
+    }
+    .play-trailer {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 18px;
+      color: #ff4500;
+      margin-top: 10px;
+    }
+    
+    .play-trailer i {
+      margin-right: 8px;
+      font-size: 20px;
+    }
+    /* Add this to your CSS file (MovieDetailsPage.css) */
+  .back-arrow {
+    
+      cursor: pointer; /* Changes cursor to pointer on hover */
+    
+    }
+    
+    .back-arrow i {
+      margin-right: 8px;
+      margin-bottom: 10px;
+    }
+    
+    .back-arrow:hover {
+      color: #c4e4c5; /* Change the color when hovered, you can customize this */
+    }
+    
